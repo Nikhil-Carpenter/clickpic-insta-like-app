@@ -1,0 +1,198 @@
+.profile_section{
+    width: 100%;
+    margin-top: 60px;
+    /* padding: 20px; */
+    /* background-color: gray; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+.user_profile{
+    width: 60%;
+    height: 200px;
+    /* background-color: yellow; */
+    display: flex;
+}
+.user_img_sec{
+    width: 30%;
+    padding: 30px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    /* background-color: green; */
+    overflow: hidden;
+}
+.user_img_sec img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.user_details_sec{
+    width: 70%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 20px;
+    /* background-color: blue; */
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    /* background-color: beige; */
+    /* padding: 2px; */
+}
+.row h2{
+    font-weight: 400;
+}
+.row_1{
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.row_1  .buttons{
+    display: flex;
+    column-gap: 10px;
+}
+.buttons button{
+    /* width: 100%; */
+    /* margin-top: 15px; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #DBDBDB;
+    background-color: #0095f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.buttons .btn1{
+    background-color: #fff;
+    color: #000;
+}
+.row_2{
+    column-gap: 30px;
+}
+.row_2 span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.row_3{
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+/* Post section Css */
+
+.posts{
+    width: 60%;
+    padding: 20px 2%;
+    /* background-color: #0095f6;    */
+    display: flex;
+    row-gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+}
+.post_thumb{
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+}
+.post_thumb img,.post_thumb video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+.overlay:hover{
+    opacity:1;
+}
+.overlay i{
+    /* cursor: pointer; */
+    padding: 5px;
+}
+
+/* Edit modal Css */
+
+.edit_modal{
+    width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     z-index: 10;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgba( 0, 0, 0, 0.7);
+}
+
+.edit_modal_child{
+    width: 50%;
+    /* height:90vh; */
+    background-color: #fff;
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    /* overflow: hidden; */
+    row-gap: 10px;
+}
+.modal_head{
+    padding: 10px 0;
+}
+.close-btn{
+    color:red;
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.inp,select{
+    width: 100%;
+    height: 40px;
+    text-indent: 20px;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+
+}
+.update-btn{
+    align-self: center;
+    width: 100%;
+    margin-top: 15px;
+    padding: 6px 0;
+    border-radius: 8px;
+    border: 1px solid #DBDBDB;
+    background-color: #0095f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.smile_icon{
+    font-size: 2rem;
+    margin-left: 10px;
+}

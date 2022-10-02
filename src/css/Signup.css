@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color:#dbdbdb; */
+}
+
+body{
+    background-color: #FFFF;
+}
+
+/* Css for main page */
+.mainPage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    
+}
+
+/* css for sign up page */
+.signupDetails{
+    margin-top: 50px;
+    padding: 30px 0px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    border: 1px solid #DBDBDB;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.signup_form{
+    /* margin-top: 50px; */
+    /* padding: 30px 0px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    /* border: 1px solid #DBDBDB; */
+    flex-direction: column;
+    row-gap: 10px;
+}
+.signupDetails>.txt{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 600;
+    color: #958e8e;
+}
+
+
+.text{
+    margin: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #dbdbdb;
+}
+
+.input_box{
+    width: 80%;
+    padding: 10px 10px;
+    font-size: 12px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    /* outline: none; */
+    color: #958e8e;
+}
+
+.input_box{
+    color: gray;
+}
+
+.btn{
+    width: 80%;
+    margin-top: 15px;
+    padding: 6px 0;
+    border-radius: 5px;
+    border: 1px solid #DBDBDB;
+    background-color:#0095f6;
+    color: white;
+    font-weight: bold;
+    /* cursor: pointer; */
+}
+.btn:hover{
+    cursor: pointer;
+}
+.facebook_btn{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.facebook_btn>p{
+    padding-left:5px ;
+}
+.signupDetails>p{
+    padding: 0px 50px;
+}
+
+.end-txt{
+    font-size: 12px;
+    text-align: center;
+    color: #958e8e;
+}
+
+.end-txt>span{
+    font-weight: bold;
+}
+
+/* css for loginlink */
+.loginLink{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 30px 0px;
+    border: 1px solid #DBDBDB;
+}
+
+.loginLink>span{
+    color: #0095f6;
+}   
+.loginLink>span:hover{
+    cursor: pointer;
+}
+
+/* css for social download */
+.social_download_signup{
+    margin-top: 14px;
+    /* background-color: #2095f7; */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.social_download_signup>div{
+    width: 20%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+.social_download_signup>div>img{
+    width: 100%;
+}
+
+.mainPage>p{
+    padding: 15px 0px;
+}
+
+/* css for other details */
+
+.other_details{
+    width: 100%;
+    padding: 50px 0px;
+}
+.other_details>ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.other_details>ul>li{
+    font-size: 12px;
+    list-style: none;
+    padding-right: 18px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #8e8e8e;
+    cursor: pointer;
+}

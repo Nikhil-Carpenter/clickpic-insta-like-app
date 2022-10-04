@@ -12,7 +12,7 @@ function Login(){
 
     function login(){
 
-        fetch("http://localhost:8000/users/login",{
+        fetch("https://clickpic-api.adaptable.app/users/login",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

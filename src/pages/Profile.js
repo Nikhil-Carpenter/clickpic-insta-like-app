@@ -21,7 +21,7 @@ const Profile = () => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:8000/users/profile/${params.username}/${loginDetails.current.userId}`,
+      `https://clickpic-api.adaptable.app/users/profile/${params.username}/${loginDetails.current.userId}`,
       {
         headers: {
           authorization: `Bearer ${loginDetails.current.token}`,

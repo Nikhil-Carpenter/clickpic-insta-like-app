@@ -9,7 +9,7 @@ const Explore = () => {
   const [posts,setPosts] = useState([]);
 
   useEffect(()=>{
-    fetch(`http://localhost:8000/users/posts/explore/random/${loginDetails.current.userId}`,{
+    fetch(`https://clickpic-api.adaptable.app/users/posts/explore/random/${loginDetails.current.userId}`,{
       headers:{
         "authorization": `Bearer ${loginDetails.current.token}`,
     }

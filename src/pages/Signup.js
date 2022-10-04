@@ -11,7 +11,7 @@ function Signup()
 
     function readValue(property,value){
         user[property] = value.toLowerCase();
-        console.log(user);
+        // console.log(user);
     }
     
     function signUp(){
@@ -28,7 +28,7 @@ function Signup()
             if(Data.success === true){
                 form.current.reset();
                 navigate("/login")
-                console.log(Data);
+                // console.log(Data);
             }else{
                 console.log(Data);
             }

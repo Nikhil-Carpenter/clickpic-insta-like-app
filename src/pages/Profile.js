@@ -32,7 +32,7 @@ const Profile = () => {
       .then((data) => {
         if (data.success === true) {
           setProfile(data);
-          console.log(data);
+          // console.log(data);
         }
       })
       .catch((err) => {
@@ -41,7 +41,7 @@ const Profile = () => {
   }, [params]);
 
   function follow() {
-    fetch("http://localhost:8000/connections/create", {
+    fetch("https://clickpic-api.adaptable.app/connections/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const Profile = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.success === true) {
           let tempProfile = { ...profile };
           tempProfile.connection = data.connection;
@@ -69,7 +69,7 @@ const Profile = () => {
 
   function unFollow() {
     fetch(
-      `http://localhost:8000/connections/connection/${profile.connection._id}`,
+      `https://clickpic-api.adaptable.app/connections/connection/${profile.connection._id}`,
       {
         method: "DELETE",
         headers: {
@@ -79,7 +79,7 @@ const Profile = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.success === true) {
           let tempProfile = { ...profile };
           let myIndex = tempProfile.followers.findIndex((followerData, idx) => {
@@ -180,7 +180,7 @@ const Profile = () => {
   }
 
   function updateProfile() {
-    fetch(`http://localhost:8000/users/${loginDetails.current.userId}`, {
+    fetch(`https://clickpic-api.adaptable.app/users/${loginDetails.current.userId}`, {
       method: "PUT",
       headers: {
         "authorization": `Bearer ${loginDetails.current.token}`,
@@ -234,7 +234,7 @@ const Profile = () => {
     commentMsg["post"] = postId;
     // console.log(post)
 
-    fetch("http://localhost:8000/posts/comment", {
+    fetch("https://clickpic-api.adaptable.app/posts/comment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -271,7 +271,7 @@ const Profile = () => {
   }
 
   function deleteComment(commentId, post) {
-    fetch(`http://localhost:8000/posts/comment/${commentId}`, {
+    fetch(`https://clickpic-api.adaptable.app/posts/comment/${commentId}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${loginDetails.current.token}`,
@@ -298,7 +298,7 @@ const Profile = () => {
   }
 
   function like(postId) {
-    fetch("http://localhost:8000/posts/like", {
+    fetch("https://clickpic-api.adaptable.app/posts/like", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -308,7 +308,7 @@ const Profile = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.success === true) {
           let tempPost = { ...singlePost };
           tempPost.likes.push(data.like);
@@ -321,7 +321,7 @@ const Profile = () => {
   }
 
   function unlikePost(likeId, postId) {
-    fetch(`http://localhost:8000/posts/unlike/${likeId}`, {
+    fetch(`https://clickpic-api.adaptable.app//posts/unlike/${likeId}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${loginDetails.current.token}`,
@@ -330,13 +330,13 @@ const Profile = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.success === true) {
-          console.log(data);
+          // console.log(data);
           let tempPost = { ...singlePost };
 
           let likeIndex = tempPost.likes.findIndex((like, idx) => {
             return like.user === loginDetails.current.userId;
           });
-          console.log(likeIndex);
+          // console.log(likeIndex);
 
           tempPost.likes.splice(likeIndex, 1);
           setSinglePost(tempPost);
@@ -348,7 +348,7 @@ const Profile = () => {
   }
 
   function loadSinglePost(post) {
-    fetch(`http://localhost:8000/posts/comments/${post._id}`, {
+    fetch(`https://clickpic-api.adaptable.app/posts/comments/${post._id}`, {
       headers: {
         authorization: `Bearer ${loginDetails.current.token}`,
       },
@@ -378,7 +378,7 @@ const Profile = () => {
 
   function addchatPerson(chatId){
 
-    fetch(`http://localhost:8000/users/addchat/${loginDetails.current.userId}`,{
+    fetch(`https://clickpic-api.adaptable.app/users/addchat/${loginDetails.current.userId}`,{
         method:"PUT",
         headers: {
           "Content-Type": "application/json",

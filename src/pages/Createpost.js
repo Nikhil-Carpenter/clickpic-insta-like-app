@@ -21,7 +21,7 @@ const Createpost = () => {
     function createpost(){
         // console.log(post);
 
-        fetch(`http://localhost:8000/posts/create`,{
+        fetch(`https://clickpic-api.adaptable.app/posts/create`,{
             method:"POST",
             headers:{
                "authorization":`Bearer ${loginDetails.current.token}` 

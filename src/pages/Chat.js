@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import Header from "../components/Header";
 import "../css/Chat.css";
 
-const socket  = io.connect("http://localhost:8000");
+const socket  = io.connect("https://clickpic-api.adaptable.app/");
 
 function Chat(){
 
@@ -22,7 +22,7 @@ function Chat(){
         // Sending message o socket to create a channel for loggedin user
         socket.emit("create_channel",loginDetails.current.userId)
 
-        fetch(`http://localhost:8000/chats/chatlist/${loginDetails.current.userId}`,{
+        fetch(`https://clickpic-api.adaptable.app/chats/chatlist/${loginDetails.current.userId}`,{
             headers: {
                 authorization: `Bearer ${loginDetails.current.token}`,
             },
@@ -66,7 +66,7 @@ function Chat(){
 
     function getInitialChats(){
 
-        fetch(`http://localhost:8000/chats/chats/${loginDetails.current.userId}/${currentPerson?._id}`,{
+        fetch(`https://clickpic-api.adaptable.app/chats/chats/${loginDetails.current.userId}/${currentPerson?._id}`,{
             headers:{
                 authorization: `Bearer ${loginDetails.current.token}`,
             }

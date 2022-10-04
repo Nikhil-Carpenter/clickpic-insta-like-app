@@ -21,7 +21,7 @@ function Homepage() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8000/users/posts/${loginDetails.current.userId}`, {
+    fetch(`https://clickpic-api.adaptable.app/users/posts/${loginDetails.current.userId}`, {
       headers: {
         authorization: `Bearer ${loginDetails.current.token}`,
       },
@@ -39,7 +39,7 @@ function Homepage() {
   }, []);
 
   function like(postId) {
-    fetch("http://localhost:8000/posts/like", {
+    fetch("https://clickpic-api.adaptable.app/posts/like", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +66,7 @@ function Homepage() {
   }
 
   function unlikePost(likeId, postId) {
-    fetch(`http://localhost:8000/posts/unlike/${likeId}`, {
+    fetch(`https://clickpic-api.adaptable.app/posts/unlike/${likeId}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${loginDetails.current.token}`,
@@ -97,7 +97,7 @@ function Homepage() {
     commentMsg["post"] = postId;
     // console.log(post)
 
-    fetch("http://localhost:8000/posts/comment", {
+    fetch("https://clickpic-api.adaptable.app/posts/comment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -137,7 +137,7 @@ function Homepage() {
 
   function deleteComment(commentId,post) {
 
-    fetch(`http://localhost:8000/posts/comment/${commentId}`, {
+    fetch(`https://clickpic-api.adaptable.app/posts/comment/${commentId}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${loginDetails.current.token}`,
@@ -210,7 +210,7 @@ function Homepage() {
   function loadSinglePost(post) {
     
 
-    fetch(`http://localhost:8000/posts/comments/${post._id}`,{
+    fetch(`https://clickpic-api.adaptable.app/posts/comments/${post._id}`,{
         headers:{
             "authorization": `Bearer ${loginDetails.current.token}`
         }
@@ -239,7 +239,7 @@ function Homepage() {
 
   useEffect(()=>{
 
-    fetch(`http://localhost:8000/connections/pending/${loginDetails.current.userId}`,{
+    fetch(`https://clickpic-api.adaptable.app/connections/pending/${loginDetails.current.userId}`,{
       headers:{
         "authorization": `Bearer ${loginDetails.current.token}`,
       }
@@ -259,7 +259,7 @@ function Homepage() {
   
   function acceptRequest(connectionId){
 
-    fetch(`http://localhost:8000/connections/changestatus/${connectionId}`,{
+    fetch(`https://clickpic-api.adaptable.app/connections/changestatus/${connectionId}`,{
       method:"PUT",
       headers:{
         "authorization": `Bearer ${loginDetails.current.token}`,
@@ -289,7 +289,7 @@ function Homepage() {
 
   function deleteRequest(connectionId){
 
-    fetch(`http://localhost:8000/connections/connection/${connectionId}`,{
+    fetch(`https://clickpic-api.adaptable.app/connections/connection/${connectionId}`,{
       method:"DELETE",
       headers:{
         "authorization":`Bearer ${loginDetails.current.token}`,
@@ -316,7 +316,7 @@ function Homepage() {
   }
 
   function savePosts(postId){
-    fetch(`http://localhost:8000/posts/savepost/${loginDetails.current.userId}`,{
+    fetch(`https://clickpic-api.adaptable.app/posts/savepost/${loginDetails.current.userId}`,{
         method:"PUT",
         headers: {
           "Content-Type": "application/json",

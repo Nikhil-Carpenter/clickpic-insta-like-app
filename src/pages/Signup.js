@@ -16,7 +16,7 @@ function Signup()
     
     function signUp(){
 
-        fetch("http://localhost:8000/users/signup",{
+        fetch("https://clickpic-api.adaptable.app/users/signup",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
